@@ -1,0 +1,33 @@
+
+{% extends 'events/base.html' %}
+
+{% block content %}
+
+	<h1>{{venue}}</h1>
+ <!--  ul  = un ordered list -->
+
+<div class="card">
+  <div class="card-header">
+    <strong>{{ venue.Venue_name }}</strong>
+  </div>
+  <div class="card-body">
+    
+    <p class="card-text">
+		<ul>
+	<li>Address: {{venue.address}}</li>
+	<li>Zip Code: {{venue.zip_code}}</li>
+	<li>Phone number: {{venue.phone}}</li>
+	<li>Web page: <a href="{{venue.web}}">{{venue.web}}</a></li>
+	
+	
+		</ul>
+	</p>
+    <a href="{{venue.web}}" class="btn btn-primary">Go to {{venue}}'s website</a>
+  </div>
+</div>
+	
+	 <!--  event.name of db row. exp: event.event_date  -->
+
+
+
+{% endblock %}
